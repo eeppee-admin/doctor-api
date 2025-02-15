@@ -1,0 +1,24 @@
+### 历史api，使用的是demo数据库
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+    "username":"aaa",
+    "password":"123"
+}
+
+### 历史api，使用的是demo数据库
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "username": "aaa",
+    "password": "123"
+}
+
+
+### 查询病人1的信息
+GET http://localhost:8080/patients/1
+
+### 查询病人1历史病历记录
+GET http://localhost:8080/patients/1/records

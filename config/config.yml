@@ -1,0 +1,7 @@
+app:
+  name: signin_and_signup
+  port: :6969
+
+# for mysql
+database:
+  dsn: root:123456@tcp(127.0.0.0.1:3306)/prod?charset=utf8mb4&parseTime=True&loc=Local
