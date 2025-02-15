@@ -26,5 +26,9 @@ GET /api/patients/:id/records #id是患者id
 
 # 药品
 ```js
-GET /api/medi
+GET /api/medicines/
 ```
+
+
+
+# 或者看gin debug信息也给出路由组

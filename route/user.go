@@ -7,8 +7,6 @@ import (
 )
 
 // 注册路由
-// r.POST("/register", registerUser)
-// r.POST("/login", loginUser)
 func SetupUserRoutes(r *gin.Engine) {
 	userGroup := r.Group("/api/users")
 	{

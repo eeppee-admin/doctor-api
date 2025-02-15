@@ -23,6 +23,6 @@ GET http://localhost:8080/api/patients/1
 ### 查询病人1历史病历记录
 GET http://localhost:8080/api/patients/1/records
 
-### test
+### 查询药品1信息
 GET http://localhost:8080/api/medicines/1
 

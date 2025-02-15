@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 	"signin_and_signup/config"
-	"signin_and_signup/model"
+	modelv2 "signin_and_signup/model_v2"
 
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"
@@ -14,7 +14,7 @@ import (
 // todo: replace db to config.DB
 
 func RegisterUser(c *gin.Context) {
-	var newUser model.User
+	var newUser modelv2.UserV2
 	if err := c.ShouldBindJSON(&newUser); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
@@ -40,14 +40,14 @@ func RegisterUser(c *gin.Context) {
 }
 
 func LoginUser(c *gin.Context) {
-	var login model.User
+	var login modelv2.UserV2
 	if err := c.ShouldBindJSON(&login); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
 	// 查找用户
-	var user model.User
+	var user modelv2.UserV2
 	result := config.DB.Where("username = ?", login.Username).First(&user)
 	if errors.Is(result.Error, gorm.ErrRecordNotFound) {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid username or password"})
