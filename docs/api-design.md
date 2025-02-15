@@ -26,5 +26,5 @@ GET /api/patients/:id/records #id是患者id
 
 # 药品
 ```js
-
+GET /api/medi
 ```
