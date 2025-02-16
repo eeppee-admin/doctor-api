@@ -21,7 +21,7 @@ jobs:
 
       - name: 测试MySql连接
         run: |
-          mysql -uroot -p123456 -e 'SELECT version()'
+          mysql -uroot -p123456 -e 'create database prod;'
       - name: Checkout code
         uses: actions/checkout@v3
 
