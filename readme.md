@@ -120,6 +120,21 @@ Forwarding          http://2ece470b.r7.cpolar.top -> http://localhost:8080
 curl http://2ece470b.r7.cpolar.top/api/medicines
 ```
 
+# github first push guide
+```bash
+# met error:
+#remote: Resolving deltas: 100% (10/10), done.
+# remote: fatal: did not receive expected object bcfa1353e3b40252581153fe39fc58a1cb8518df
+# error: remote unpack failed: index-pack failed
+# To https://github.com/eeppee-admin/-api-.git
+#  ! [remote rejected] master -> master (failed)
+# error: failed to push some refs to 'https://github.com/eeppee-admin/-api-.git'
+# do:
+git fetch --unshallow 
+# then github is my new remote
+git push github master
+```
+
 # ref link:
 - https://gitee.com/EEPPEE_admin/doctor-api-backend
 - https://www.cpolar.com/
