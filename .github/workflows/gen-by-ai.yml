@@ -1,4 +1,4 @@
-name: MySQL Setup
+name: 测试go+mysql项目能不能运行
 
 on:
   push:
