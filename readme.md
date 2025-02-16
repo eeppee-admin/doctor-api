@@ -111,5 +111,15 @@ ICD_10	              存储诊断编码表
 3. 药品信息 （todo）
 
 
+
+# 内网穿透guide
+```console
+$cpolar 8080
+Forwarding          http://2ece470b.r7.cpolar.top -> http://localhost:8080
+# curl测试
+curl http://2ece470b.r7.cpolar.top/api/medicines
+```
+
 # ref link:
 - https://gitee.com/EEPPEE_admin/doctor-api-backend
+- https://www.cpolar.com/

@@ -26,3 +26,7 @@ GET http://localhost:8080/api/patients/1/records
 ### 查询药品1信息
 GET http://localhost:8080/api/medicines/1
 
+
+
+### 内网穿透 cpolar 8080
+GET http://2ece470b.r7.cpolar.top/api/medicines/
