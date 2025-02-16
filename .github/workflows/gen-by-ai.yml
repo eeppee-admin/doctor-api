@@ -1,3 +1,29 @@
+name: MySQL Setup
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  setup-mysql:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up MySQL
+        uses: shogo82148/actions-setup-mysql@v1
+        with:
+          mysql-version: "8.0"  # 指定 MySQL 版本
+          root-password: "123456"  # 设置 root 用户密码
+          user: "root"  # 创建新用户
+          password: "123456"  # 新用户的密码
+
+      - name: Test MySQL Connection
+        run: |
+          mysql -uroot -p123456 -e 'SELECT version()'
+
+
 name: Go CI/CD(ai生成的)
 
 on:
