@@ -1,4 +1,4 @@
-### 历史api，使用的是demo数据库
+### 更新的注册api
 POST http://localhost:8080/api/users/register
 Content-Type: application/json
 
@@ -7,7 +7,7 @@ Content-Type: application/json
     "password":"123"
 }
 
-### 历史api，使用的是demo数据库
+### 更新的登录api
 POST http://localhost:8080/api/users/login
 Content-Type: application/json
 
@@ -15,7 +15,6 @@ Content-Type: application/json
     "username": "aaa",
     "password": "123"
 }
-
 
 ### 查询病人1的信息
 GET http://localhost:8080/api/patients/1
@@ -28,5 +27,5 @@ GET http://localhost:8080/api/medicines/1
 
 
 
-### 内网穿透 cpolar 8080
+### 内网穿透 cpolar 8080，随时变动，不用看以下例子
 GET http://2ece470b.r7.cpolar.top/api/medicines/

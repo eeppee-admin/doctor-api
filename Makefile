@@ -5,7 +5,6 @@ up-cpolar:
 	cpolar 8080
 
 note:
-	@echo api组
 	@echo [GIN-debug] POST   /api/users/register      
 	@echo [GIN-debug] POST   /api/users/login          
 	@echo [GIN-debug] GET    /api/patients/:id         
