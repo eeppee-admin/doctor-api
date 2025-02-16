@@ -1,2 +1,8 @@
 *.db
 .env
+Dockerfile
+docker-compose.yml
+*.exe
+*.sql
+
+.github/

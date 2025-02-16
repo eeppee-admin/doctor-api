@@ -11,8 +11,6 @@ import (
 	"gorm.io/gorm"
 )
 
-// todo: replace db to config.DB
-
 func RegisterUser(c *gin.Context) {
 	var newUser modelv2.UserV2
 	if err := c.ShouldBindJSON(&newUser); err != nil {

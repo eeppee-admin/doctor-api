@@ -1,3 +1,10 @@
+# 思路
+1. drop掉所有表，生成数据库model
+2. 生成model 的fake data
+3. 编写api，含GET POST
+4. docker运行起来
+4. 测试api调用情况
+
 # 依赖
 ```bash
 go get -u github.com/gin-gonic/gin
@@ -112,7 +119,7 @@ ICD_10	              存储诊断编码表
 
 
 
-# 内网穿透guide
+# 内网穿透guide (fixed)
 ```console
 $cpolar 8080
 Forwarding          http://2ece470b.r7.cpolar.top -> http://localhost:8080
@@ -120,7 +127,7 @@ Forwarding          http://2ece470b.r7.cpolar.top -> http://localhost:8080
 curl http://2ece470b.r7.cpolar.top/api/medicines
 ```
 
-# github first push guide
+# github first push guide (fixed)
 ```bash
 # met error:
 #remote: Resolving deltas: 100% (10/10), done.
@@ -138,3 +145,4 @@ git push github master
 # ref link:
 - https://gitee.com/EEPPEE_admin/doctor-api-backend
 - https://www.cpolar.com/
+- github action学习:https://shipengqi.github.io/golang-learn/docs/project/09_actions/#:~:text=GitHub%20Actions%20%E6%98%AF%20GitHub%20%E4%B8%BA%E6%89%98%E7%AE%A1%E5%9C%A8%20github.com%20%E7%AB%99%E7%82%B9%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%8F%90%E4%BE%9B%E7%9A%84%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1%E3%80%82%20%E5%9C%A8%E6%9E%84%E5%BB%BA%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E4%BB%BB%E5%8A%A1%E6%97%B6%EF%BC%8C%E9%9C%80%E8%A6%81%E5%AE%8C%E6%88%90%E5%BE%88%E5%A4%9A%E6%93%8D%E4%BD%9C%EF%BC%8C%E6%AF%94%E5%A6%82%E5%85%8B%E9%9A%86%E4%BB%A3%E7%A0%81%E3%80%81%E7%BC%96%E8%AF%91%E4%BB%A3%E7%A0%81%E3%80%81%E8%BF%90%E8%A1%8C%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E3%80%81%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83%E9%95%9C%E5%83%8F%E7%AD%89%E3%80%82,Actions%20%E6%98%AF%E5%8F%AF%E4%BB%A5%E5%85%B1%E4%BA%AB%E7%9A%84%EF%BC%8C%E5%BC%80%E5%8F%91%E8%80%85%E5%8F%AF%E4%BB%A5%E5%B0%86%20Actions%20%E4%B8%8A%E4%BC%A0%E5%88%B0%20GitHub%20%E7%9A%84%20Actions%20%E5%B8%82%E5%9C%BA%E3%80%82

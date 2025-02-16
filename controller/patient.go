@@ -8,15 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// todo: replace db to config.DB
-
 func GetPatient(c *gin.Context) {
-	// 自动迁移表结构
-	// err := config.DB.AutoMigrate(&modelv2.PatientV2{}, &modelv2.MedicalRecordV2{})
-	// if err != nil {
-	// 	log.Fatalf("Failed to migrate database: %v", err)
-	// }
-
 	id := c.Param("id")
 	var patient modelv2.PatientV2
 	if err := config.DB.First(&patient, id).Error; err != nil {

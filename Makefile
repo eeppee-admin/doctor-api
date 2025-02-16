@@ -4,6 +4,13 @@ all:
 up-cpolar:
 	cpolar 8080
 
+# Dockerfile 的东西，可以忽略
+build-docker-image:
+	docker build -t my-gin-api .
+remove-docker-image:
+	docker image rm my-gin-api
+
+
 note:
 	@echo [GIN-debug] POST   /api/users/register      
 	@echo [GIN-debug] POST   /api/users/login          

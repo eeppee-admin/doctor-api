@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// SetupMedicineRoutes 定义药品相关的路由
+// 定义药品相关的路由
 func SetupMedicineRoutes(r *gin.Engine) {
 	medicineGroup := r.Group("/api/medicines")
 	{
