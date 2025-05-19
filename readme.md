@@ -1,3 +1,6 @@
+> [!WARNING]  
+> 全部代码几乎由ai生成，不写了，或者迁移到gitee.com/eeppee_admin/doctor-api-backend
+
 # 思路
 1. drop掉所有表，生成数据库model
 2. 生成model 的fake data
